@@ -3,6 +3,26 @@ package ru.lanit.spring;
 public class MusicPlayer {
     private Music music;
 
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
+    private int volume;
+
     //Inversion of Control
     public MusicPlayer(Music music) {
         this.music = music;
