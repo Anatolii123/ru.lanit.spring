@@ -8,17 +8,5 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
-
-    <bean id="musicBean"
-          class="ru.lanit.spring.ClassicalMusic">
-    </bean>
-
-    <bean id="musicPlayer" class="ru.lanit.spring.MusicPlayer"
-            scope="prototype">
-        <property name="music" ref="musicBean"/>
-
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
-
+    <context:component-scan base-package="ru.lanit.spring"/>
 </beans>
