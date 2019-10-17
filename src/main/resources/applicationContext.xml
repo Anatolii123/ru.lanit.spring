@@ -13,7 +13,8 @@
           class="ru.lanit.spring.ClassicalMusic">
     </bean>
 
-    <bean id="musicPlayer" class="ru.lanit.spring.MusicPlayer">
+    <bean id="musicPlayer" class="ru.lanit.spring.MusicPlayer"
+            scope="prototype">
         <property name="music" ref="musicBean"/>
 
         <property name="name" value="${musicPlayer.name}"/>
