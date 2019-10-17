@@ -12,7 +12,7 @@
     </bean>
 
     <bean id="musicPlayer" class="ru.lanit.spring.MusicPlayer">
-        <constructor-arg ref="musicBean" />
+        <property name="music" ref="musicBean"/>
     </bean>
 
 </beans>
